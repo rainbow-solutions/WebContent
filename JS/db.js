@@ -8,5 +8,24 @@ function dbinit(){
 	    publicKey: "3949c6ad-30d1-4e77-8b10-a426d38cd21e",
 	    apiVersion: 0
 	});
-	alert("OK");
+}
+
+function create_user(username, password){
+	var User = StackMob.Model.extend({ schemaName: 'user' });
+	var user = new User({ username: username ,password: password });
+	user.create();
+}
+
+function dblogin(username, password){
+	var user = new StackMob.User({ username: username ,password: password });
+	user.login(false, {
+	success: function(model) {
+	console.debug("Login Done:");
+	window.location = "import.htm";
+
+	},
+	error: function(model, response) {
+	        console.debug(response);
+	    }
+	});
 }

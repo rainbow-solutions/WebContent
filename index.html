@@ -1,36 +1,10 @@
 <head>
 </head>
 <script type="text/javascript" src="JS/db.js"></script>
-<script type="text/javascript">
-/**
- * This code declares your class and saves an object "blogentry" to the table on StackMob.
- * StackMob will create the table for you automatically based on your JSON.
- */
 
-</script>
-<script type="text/javascript">
-function create(){
-var User = StackMob.Model.extend({ schemaName: 'user' });
-var user = new User({ username: document.getElementById("alias").value ,password: document.getElementById("password").value });
-user.create();
-}
-function login(){
-var user = new StackMob.User({ username: document.getElementById("alias").value ,password: document.getElementById("password").value });
-user.login(false, {
-success: function(model) {
-console.debug("Test Debug@:");
-window.location = "import.htm";
-
-},
-error: function(model, response) {
-        console.debug(response);
-    }
-});
-}
-</script>
 <body onload="dbinit()">
 	<input type="text" id="alias"/><br>
 	<input type="password" id="password"/><br>
-	<input type="button" onclick="create()" value="Registrieren"/>
-	<input type="button" onclick="login()" value="Login"/>
+	<input type="button" onclick="create_user(document.getElementById('alias').value, document.getElementById('password').value)" value="Registrieren"/>
+	<input type="button" onclick="dblogin(document.getElementById('alias').value, document.getElementById('password').value)" value="Login"/>
 </body>
