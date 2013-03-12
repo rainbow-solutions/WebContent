@@ -1,8 +1,6 @@
 <head>
 </head>
-<script type="text/javascript" src="JS/db.js">
-dbinit();
-</script>
+<script type="text/javascript" src="JS/db.js"></script>
 <script type="text/javascript">
 /**
  * This code declares your class and saves an object "blogentry" to the table on StackMob.
@@ -30,7 +28,7 @@ error: function(model, response) {
 });
 }
 </script>
-<body>
+<body onload="dbinit()">
 	<input type="text" id="alias"/><br>
 	<input type="password" id="password"/><br>
 	<input type="button" onclick="create()" value="Registrieren"/>
