@@ -21,7 +21,7 @@ function dblogin(username, password){
 	user.login(false, {
 	success: function(model) {
 	console.debug("Login Done:");
-	window.location = "import.htm";
+	window.location = "admin/import.htm";
 
 	},
 	error: function(model, response) {

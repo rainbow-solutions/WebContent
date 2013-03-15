@@ -1,0 +1,59 @@
+{
+"Koerperteile":[
+{"id": "1", "koerper_partie_de":"Koerperteil 1", "koerper_partie_en":"Body Part 1"},
+{"id": "2", "koerper_partie_de":"Koerperteil 2", "koerper_partie_en":"Body Part 2"},
+{"id": "3", "koerper_partie_de":"Koerperteil 3", "koerper_partie_en":"Body Part 3"},
+{"id": "4", "koerper_partie_de":"Koerperteil 4", "koerper_partie_en":"Body Part 4"},
+{"id": "5", "koerper_partie_de":"Koerperteil 5", "koerper_partie_en":"Body Part 5"}
+],
+"Sportarten":[
+{"id": "1", "sport_art_de":"Laufen", "sport_art_en":"Running"},
+{"id": "2", "sport_art_de":"Klettern", "sport_art_en":"Climbing"},
+{"id": "3", "sport_art_de":"Biathlon", "sport_art_en":"Biathlon"},
+{"id": "4", "sport_art_de":"Schwimmen", "sport_art_en":"Swimming"},
+{"id": "5", "sport_art_de":"Skitouring", "sport_art_en":"Skitouring"}
+],
+"Trainingsarten":[
+{"id": "1", "trainings_art_de":"Trainingsart 1", "trainings_art_en":"Trainingsart 1"},
+{"id": "2", "trainings_art_de":"Trainingsart 2", "trainings_art_en":"Trainingsart 2"},
+{"id": "3", "trainings_art_de":"Trainingsart 3", "trainings_art_en":"Trainingsart 3"},
+{"id": "4", "trainings_art_de":"Trainingsart 4", "trainings_art_en":"Trainingsart 4"},
+{"id": "5", "trainings_art_de":"Trainingsart 5", "trainings_art_en":"Trainingsart 5"}
+],
+"Trainingsgeraete":[
+{"id": "1", "trainings_geraet_de":"Trainingsgeraet 1", "trainings_geraet_en":"Training gear 1"},
+{"id": "2", "trainings_geraet_de":"Trainingsgeraet 2", "trainings_geraet_en":"Training gear 2"},
+{"id": "3", "trainings_geraet_de":"Trainingsgeraet 3", "trainings_geraet_en":"Training gear 3"},
+{"id": "4", "trainings_geraet_de":"Trainingsgeraet 4", "trainings_geraet_en":"Training gear 4"},
+{"id": "5", "trainings_geraet_de":"Trainingsgeraet 5", "trainings_geraet_en":"Training gear 5"}
+],
+"Uebungen":[
+{"id": "1", "uebung_de":"Uebung 1", "uebung_en":"Exercise 1", "beschreibung_de":"Uebung 1 Beschreibung", "beschreibung_en":"Exercise 1 text"},
+{"id": "2", "uebung_de":"Uebung 1", "uebung_en":"Exercise 1", "beschreibung_de":"Uebung 2 Beschreibung", "beschreibung_en":"Exercise 2 text"},
+{"id": "3", "uebung_de":"Uebung 1", "uebung_en":"Exercise 1", "beschreibung_de":"Uebung 3 Beschreibung", "beschreibung_en":"Exercise 3 text"},
+{"id": "4", "uebung_de":"Uebung 1", "uebung_en":"Exercise 1", "beschreibung_de":"Uebung 4 Beschreibung", "beschreibung_en":"Exercise 4 text"},
+{"id": "5", "uebung_de":"Uebung 1", "uebung_en":"Exercise 1", "beschreibung_de":"Uebung 5 Beschreibung", "beschreibung_en":"Exercise 5 text"}
+],
+"Trainings":[
+{"id": "1", "bemerkung_de":"Training 1", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"1", "Sportart":"2", "Trainigsart":"1","Trainigsgeraet":"3","Uebung":"3"},
+{"id": "2", "bemerkung_de":"Training 2", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps","Koerperteil":"1", "Sportart":"2", "Trainigsart":"1","Trainigsgeraet":"3","Uebung":"3"},
+{"id": "3", "bemerkung_de":"Training 3", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"1", "Sportart":"2", "Trainigsart":"2","Trainigsgeraet":"3","Uebung":"3"},
+{"id": "4", "bemerkung_de":"Training 4", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"1", "Sportart":"2", "Trainigsart":"3","Trainigsgeraet":"3","Uebung":"1"},
+{"id": "5", "bemerkung_de":"Training 5", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"1", "Sportart":"2", "Trainigsart":"4","Trainigsgeraet":"3","Uebung":"2"},
+{"id": "6", "bemerkung_de":"Training 1", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"3", "Sportart":"2", "Trainigsart":"1","Trainigsgeraet":"3","Uebung":"1"},
+{"id": "7", "bemerkung_de":"Training 2", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"5", "Sportart":"2", "Trainigsart":"1","Trainigsgeraet":"3","Uebung":"1"},
+{"id": "8", "bemerkung_de":"Training 3", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"2", "Sportart":"2", "Trainigsart":"5","Trainigsgeraet":"3","Uebung":"3"},
+{"id": "9", "bemerkung_de":"Training 4", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"3", "Sportart":"2", "Trainigsart":"3","Trainigsgeraet":"3","Uebung":"3"},
+{"id": "10", "bemerkung_de":"Training 5", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"1", "Sportart":"2", "Trainigsart":"2","Trainigsgeraet":"1","Uebung":"2"},
+{"id": "11", "bemerkung_de":"Training 1", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps","Koerperteil":"1", "Sportart":"2", "Trainigsart":"3","Trainigsgeraet":"2","Uebung":"2"},
+{"id": "12", "bemerkung_de":"Training 2", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"2", "Sportart":"2", "Trainigsart":"3","Trainigsgeraet":"1","Uebung":"3"},
+{"id": "13", "bemerkung_de":"Training 3", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"5", "Sportart":"2", "Trainigsart":"1","Trainigsgeraet":"1","Uebung":"3"},
+{"id": "14", "bemerkung_de":"Training 4", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps","Koerperteil":"4", "Sportart":"3", "Trainigsart":"1","Trainigsgeraet":"2","Uebung":"2"},
+{"id": "15", "bemerkung_de":"Training 5", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"4", "Sportart":"3", "Trainigsart":"3","Trainigsgeraet":"2","Uebung":"2"},
+{"id": "16", "bemerkung_de":"Training 1", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"1", "Sportart":"3", "Trainigsart":"1","Trainigsgeraet":"4","Uebung":"3"},
+{"id": "17", "bemerkung_de":"Training 2", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"1", "Sportart":"3", "Trainigsart":"1","Trainigsgeraet":"3","Uebung":"3"},
+{"id": "18", "bemerkung_de":"Training 3", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"2", "Sportart":"3", "Trainigsart":"1","Trainigsgeraet":"3","Uebung":"1"},
+{"id": "19", "bemerkung_de":"Training 4", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"2", "Sportart":"3", "Trainigsart":"1","Trainigsgeraet":"3","Uebung":"3"},
+{"id": "20", "bemerkung_de":"Training 5", "bemerkung_en":"Training 1", "alter_min":"0", "alter_max":"99", "intensitaet_de":"Int de", "intensitaet_en":"Int En", "serien_de":"3 Serien", "serien_en":"3 series", "serien_pause_de":"3min Serienpause", "serien_pause_en":"3min pause", "wiederholungen_de":"5 WH", "wiederholungen_en":"5 reps", "Koerperteil":"1", "Sportart":"2", "Trainigsart":"1","Trainigsgeraet":"3","Uebung":"3"}
+]
+}

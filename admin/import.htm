@@ -1,0 +1,228 @@
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://static.stackmob.com/js/stackmob-js-0.7.0-bundled-min.js"></script>
+<script type="text/javascript" src="http://static.stackmob.com/js/backbone-0.9.2-min.js"></script>
+<style type="text/css" title="currentStyle">
+    @import "css/demo_page.css";
+    @import "css/demo_table.css";
+</style>
+</head>
+<script type="text/javascript">
+StackMob.init({
+    appName: "isports_10",
+    clientSubdomain: "infoedvinfotechcom",
+    publicKey: "3949c6ad-30d1-4e77-8b10-a426d38cd21e",
+    apiVersion: 0
+});
+</script>
+<script type="text/javascript">
+function importKoerperteile(){
+var koerperteil = StackMob.Model.extend({ schemaName: 'koerperpartie'});
+var Sportart = StackMob.Model.extend({ schemaName: 'sportarten'});
+var Trainigsart = StackMob.Model.extend({ schemaName: 'trainingsarten'});
+var Trainigsgeraet = StackMob.Model.extend({ schemaName: 'trainingsgeraete'});
+var Trainings = StackMob.Model.extend({ schemaName: 'trainings'});
+var Uebung = StackMob.Model.extend({ schemaName: 'uebungen'});
+
+ $.ajax({ 
+    type: 'GET', 
+    url: 'import.json', 
+    dataType: 'json',
+    success: function (data) { 
+        for (i=0; i<data.Koerperteile.length;i++){ 
+        var ID = String(data.Koerperteile[i].id);
+		var newsportart = new koerperteil({koerper_partie_de: data.Koerperteile[i].koerper_partie_de, koerper_partie_en: data.Koerperteile[i].koerper_partie_en, koerperpartie_id: ID});
+		newsportart.create({
+		success: function(model){
+		console.debug("Koerperteile OK");
+		},
+		error: function(model,response){
+		console.debug(response);
+		}
+		});
+        };
+        // Sportarten
+        for (i=0; i<data.Sportarten.length;i++){ 
+        var ID = String(data.Sportarten[i].id);
+		var newsportart = new Sportart({sport_art_de: data.Sportarten[i].sport_art_de, sport_art_en: data.Sportarten[i].sport_art_en, sportarten_id: ID});
+		newsportart.create({
+		success: function(model){
+		console.debug("Sportarten OK");
+		},
+		error: function(model,response){
+		console.debug(response);
+		}
+		});
+        };
+        // Trainingsarten
+        for (i=0; i<data.Trainingsarten.length;i++){ 
+        var ID = String(data.Trainingsarten[i].id);
+		var newtrainigsart = new Trainigsart({trainings_art_de: data.Trainingsarten[i].trainings_art_de, trainings_art_en: data.Trainingsarten[i].trainings_art_en, trainingsarten_id: ID});
+		newtrainigsart.create({
+		success: function(model){
+		console.debug("Trainigsart OK");
+		},
+		error: function(model,response){
+		console.debug(response);
+		}
+		});
+        };
+        // Trainigsgeraet
+        for (i=0; i<data.Trainingsgeraete.length;i++){ 
+        var ID = String(data.Trainingsgeraete[i].id);
+		var newtrainigsgeraet = new Trainigsgeraet({trainings_gearet_de: data.Trainingsgeraete[i].trainings_gearet_de, trainings_gearet_en: data.Trainingsgeraete[i].trainings_gearet_en, trainingsgeraete_id: ID});
+		newtrainigsgeraet.create({
+		success: function(model){
+		console.debug("Trainigsart OK");
+		},
+		error: function(model,response){
+		console.debug(response);
+		}
+		});
+        };
+        // Uebung
+        for (i=0; i<data.Uebungen.length;i++){ 
+        var ID = String(data.Uebungen[i].id);
+		var newuebung = new Uebung({uebung_de: data.Uebungen[i].uebung_de, uebung_en: data.Uebungen[i].uebung_en, beschreibung_de: data.Uebungen[i].beschreibung_de, beschreibung_en: data.Uebungen[i].beschreibung_en, uebungen_id: ID});
+		newuebung.create({
+		success: function(model){
+		console.debug("Uebeung OK");
+		},
+		error: function(model,response){
+		console.debug(response);
+		}
+		});
+        };
+        // Trainings
+        for (i=0; i<data.Trainings.length;i++){ 
+	        
+	        console.debug("Uebeung: " + data.Trainings[i].Uebung);
+	        var ID = String(data.Trainings[i].id);
+	        var training = new Trainings({trainings_id: ID, bemerkung_de:data.Trainings[i].bemerkung_de, bemerkung_en:data.Trainings[i].bemerkung_en,  alter_min:data.Trainings[i].alter_min, alter_max:data.Trainings[i].alter_max, intensitaet_de:data.Trainings[i].intensitaet_de, intensitaet_en:data.Trainings[i].intensitaet_en, serien_de:data.Trainings[i].serien_de, serien_en:data.Trainings[i].serien_en, serien_pause_de:data.Trainings[i].serien_pause_de, serien_pause_en:data.Trainings[i].serien_pause_en, wiederholungen_de:data.Trainings[i].wiederholungen_de, wiederholungen_en:data.Trainings[i].wiederholungen_en, training_koerperpartie: data.Trainings[i].Koerperteil, training_sport_art: data.Trainings[i].Sportart, training_trainings_art: data.Trainings[i].Trainigsart, training_trainingsgeraet: data.Trainings[i].Trainigsgeraet,training_uebung: data.Trainings[i].Uebung});
+			training.create({
+				success: function(model) {
+				var lID = model.get('trainings_id');
+				var lkoerperteil = new koerperteil({ koerperpartie_id: model.get('training_koerperpartie') });
+		        var ltrainigsart = new Trainigsart({ trainingsarten_id: model.get('training_trainings_art') });
+		        var lsportart = new Sportart({ sportarten_id: model.get('training_sport_art') });
+		        var ltrainigsgeraet = new Trainigsgeraet({ trainingsgeraete_id: model.get('training_trainingsgeraet') });
+		        var luebung = new Uebung({ uebungen_id: model.get('training_uebung') });
+						lkoerperteil.fetch({
+				        	success:function(model){
+				      					lkoerperteil.appendAndSave('koerperpartie_trainings',[lID]);
+				      				},
+				    				error: function(model, response) {
+				      					console.debug(response);
+				    				}
+				        	});
+				        ltrainigsart.fetch({
+				        	success:function(model){
+				      					ltrainigsart.appendAndSave('trainings_art_trainings',[lID]);
+				      				},
+				    				error: function(model, response) {
+				      					console.debug(response);
+				    				}
+				        	});
+				        ltrainigsgeraet.fetch({
+				        	success:function(model){
+				      					ltrainigsgeraet.appendAndSave('trainings_geraet_trainings',[lID]);
+				      				},
+				    				error: function(model, response) {
+				      					console.debug(response);
+				    				}
+				        	});
+				        luebung.fetch({
+				        	success:function(model){
+				      					luebung.appendAndSave('uebung_trainings',[lID]);
+				      				},
+				    				error: function(model, response) {
+				      					console.debug(response);
+				    				}
+				        	});
+				        lsportart.fetch({
+				        	success:function(model){
+				      					lsportart.appendAndSave('sport_art_trainings',[lID]);
+				      				},
+				    				error: function(model, response) {
+				      					console.debug(response);
+				    				}
+				        	});
+						},
+						error: function(model, response) {
+	      					console.debug(response);
+	      					}
+	      			});
+    };
+    },
+    error:function (xhr, textStatus, thrownError)
+                    {
+                        ret_val=xhr.readyState;
+                        console.debug("Fehler im Import=" + thrownError);
+                    }
+});
+}
+function createTraining(){
+	
+	var skoerperparties = StackMob.Model.extend({ schemaName: 'koerperpartie'});
+	var trainings = StackMob.Model.extend({ schemaName: 'trainings'});
+	var koerperpartie = new skoerperparties({ koerperpartie_id: '5' });
+	koerperpartie.fetch({
+	success:function(model){
+		
+		var training = new trainings({bemerkung:"Test", training_koerperpartie: model.get('koerperpartie_id')});
+		training.save({
+	    success: function() {
+	      koerperpartie.appendAndSave('koerperpartie_trainings',[training.get('trainings_id')]);
+	      
+	      },
+	    error: function(model, response) {
+	      alert("NO");
+	    }
+	    
+  	});
+  	
+	},
+	error:function(){alert("NO");}
+	});
+
+	
+}
+function showpartie(){
+var skoerperparties = StackMob.Model.extend({ schemaName: 'koerperpartie'});
+	var koerperpartie = new skoerperparties({koerperpartie_id: "5"});
+	koerperpartie.fetch({success: function(model){
+		alert(model.get("koerper_partie"));
+		}});
+}
+</script>
+<script type="text/javascript">
+function username(){
+if (StackMob.isLoggedIn()){
+var user = new StackMob.User({ username: StackMob.getLoggedInUser()});
+user.fetch({
+	success: function(model){
+		alert(model.get("username"));
+		}}); 
+	}
+	else alert("No user login");
+}
+</script>
+<script type="text/javascript">
+function logout(){
+var user = new StackMob.User({ username: StackMob.getLoggedInUser()});
+user.logout({
+success: function(model) {
+        window.location= "register.htm";
+    }
+});
+}
+</script>
+<body>
+<input type="button" onclick="importKoerperteile()" value="Erzeuge Koerperteile, Sportart, Trainingsart, Trainingsgeraete"/>
+<input type="button" onclick="createTraining()" value="Create Training"/>
+<input type="button" onclick="showpartie()" value="ShowPartie"/>
+<input type="button" onclick="username()" value="Eingeloggter Benutzer?"/>
+<input type="button" onclick="logout()" value="Logout"/>
+ 
+</body>
