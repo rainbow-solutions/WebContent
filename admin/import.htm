@@ -71,7 +71,7 @@ var Uebung = StackMob.Model.extend({ schemaName: 'uebungen'});
         // Trainigsgeraet
         for (i=0; i<data.Trainingsgeraete.length;i++){ 
         var ID = String(data.Trainingsgeraete[i].id);
-		var newtrainigsgeraet = new Trainigsgeraet({trainings_gearet_de: data.Trainingsgeraete[i].trainings_gearet_de, trainings_gearet_en: data.Trainingsgeraete[i].trainings_gearet_en, trainingsgeraete_id: ID});
+		var newtrainigsgeraet = new Trainigsgeraet({trainings_geraet_de: data.Trainingsgeraete[i].trainings_geraet_de, trainings_geraet_en: data.Trainingsgeraete[i].trainings_geraet_en, trainingsgeraete_id: ID});
 		newtrainigsgeraet.create({
 		success: function(model){
 		console.debug("Trainigsart OK");
