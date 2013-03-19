@@ -1,16 +1,16 @@
 <head>
 </head>
-<script type="text/javascript" src="JS/db.js"></script>
+<script type="text/javascript" src="../JS/db.js"></script>
 <script type="text/javascript">
 function loginasAdmin(result){
 	if (result == true)
-		dblogin(create_user(document.getElementById('alias').value, document.getElementById('password').value),login);
+		dblogin(document.getElementById('alias').value, document.getElementById('password').value,login);
 	else
 		console.debug("NO Admin rights!");
 		
 }
 function login(result){
-	if (result == true) window.location(main.html);
+	if (result == true) window.location = 'main.html';
 }
 </script>
 <link href="css/smoothness/jquery-ui-1.10.1.custom.css" rel="stylesheet">

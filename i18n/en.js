@@ -1,1 +1,1 @@
-String Alert = "Error:";
+var Error = "Error:";

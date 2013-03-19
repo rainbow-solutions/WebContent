@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="../JS/db.js"></script>
+<script type="text/javascript" src="JS/admin.js"></script>
+<script src="../JS/jquery-ui-1.10.1.custom.js"></script>
+<script type="text/javascript" src="../JS/jquery.dataTables.min.js"></script>
+<link href="../css/smoothness/jquery-ui-1.10.1.custom.css" rel="stylesheet">
+<script src="../i18n/en.js"></script>
+<script type="text/javascript">
+function ValidateSession(result){
+	if (result == true) {
+		document.getElementById("noUser").style.visibility = "hidden";
+		document.getElementById("tabs").style.visibility = "visible";
+		dbinit();
+		getUsers();
+	}
+	else{
+		alert("no");
+		document.getElementById("noUser").style.visibility = "visible";
+		document.getElementById("tabs").style.visibility = "hidden";
+	}
+}
+function llogout(result){
+	if (result == true) window.location = "index.html"; 
+}
+
+</script>
+ <script>
+$(function() {
+$( "#tabs" ).tabs();
+});
+</script>
+</head>
+<body onload="isuserloggedin(ValidateSession)">
+<div>
+	<input type="button" onclick="username()" value="Eingeloggter Benutzer?"/>
+	<input type="button" onclick="logout(llogout)" value="Logout"/>
+</div>
+<div id="tabs" style="padding: 0 .2em; visibility: visible">
+<ul>
+<li><a href="#tabs-1">Users</a></li>
+<li><a href="#tabs-2">Daten</a></li>
+<li><a href="#tabs-3">Import</a></li>
+</ul>
+<div id="tabs-1">
+<div id="Users"></div>
+</div>
+<div id="tabs-2">
+<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+</div>
+<div id="tabs-3">
+<input type="button" onclick="importKoerperteile()" value="Importiere"/>
+</div>
+</div>
+<div class="ui-widget">
+	<div class="ui-state-error ui-corner-all" style="padding: 0 .7em; visibility: visible" id="noUser">
+		<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+		<strong><script type="text/javascript">document.write("Error")</script></strong> Sample ui-state-error style.</p>
+	</div>
+</div>
+</body>
+</html>
