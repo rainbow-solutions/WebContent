@@ -6,7 +6,7 @@ function loginasAdmin(result){
 	if (result == true)
 		dblogin(document.getElementById('alias').value, document.getElementById('password').value,login);
 	else
-		console.debug("NO Admin rights!");
+		document.getElementById("noAdmin").style.visibility = "visible";
 		
 }
 function login(result){
@@ -32,13 +32,12 @@ function login(result){
 </table>
 </div>
 <div>
-	<input type="button" onclick="create_user(document.getElementById('alias').value, document.getElementById('password').value)" value="Registrieren"/>
 	<input type="button" onclick="isAdmin(document.getElementById('alias').value,loginasAdmin)" value="Login"/>
 	</div>
 	<div class="ui-widget">
-	<div class="ui-state-error ui-corner-all" style="padding: 0 .7em; visibility: hidden">
+	<div class="ui-state-error ui-corner-all" style="padding: 0 .7em; visibility: hidden" id="NoAdmin">
 		<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
-		<strong><script type="text/javascript">document.write(Error)</script></strong> Sample ui-state-error style.</p>
+		<strong><script type="text/javascript">document.write(Error)</script></strong> You have no admin rights!</p>
 	</div>
 </div>
 </body>
