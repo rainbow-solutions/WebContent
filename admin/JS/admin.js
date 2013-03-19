@@ -157,6 +157,12 @@ function getUsers(){
 			"aaData": data,
 			"bJQueryUI": true,
 	        "sPaginationType": "full_numbers",
+	        aoColumnDefs: [
+	                       {
+	                         sDefaultContent: '',
+	                         aTargets: [ '_all' ]
+	                       }
+	                     ],
 			"aoColumns": [
 	            { "mData": "username", "sTitle": "Benutzername" },
 	            { "mData": "alias", "sTitle": "Alias" },
