@@ -1,18 +1,8 @@
 <head>
 </head>
 <script type="text/javascript" src="JS/db.js"></script>
-<script type="text/javascript">
-function loginasAdmin(result){
-	if (result == true)
-		dblogin(create_user(document.getElementById('alias').value, document.getElementById('password').value),login);
-	else
-		console.debug("NO Admin rights!");
-		
-}
-function login(result){
-	if (result == true) window.location(main.html);
-}
-</script>
+<script type="text/javascript" src="JS/jquery-ui-1.10.1.custom.js"></script>
+<script type="text/javascript"src="JS/functions.js"></script>
 <link href="css/smoothness/jquery-ui-1.10.1.custom.css" rel="stylesheet">
 <script src="JS/jquery-ui-1.10.1.custom.js"></script>
 <script src="i18n/en.js"></script>
@@ -32,13 +22,13 @@ function login(result){
 </table>
 </div>
 <div>
-	<input type="button" onclick="create_user(document.getElementById('alias').value, document.getElementById('password').value)" value="Registrieren"/>
-	<input type="button" onclick="isAdmin(document.getElementById('alias').value,loginasAdmin)" value="Login"/>
+	<input type="button" onclick="register()" value="Registrieren"/>
+	<input type="button" onclick="dblogin(document.getElementById('alias').value, document.getElementById('password').value,login)" value="Login"/>
 	</div>
 	<div class="ui-widget">
-	<div class="ui-state-error ui-corner-all" style="padding: 0 .7em; visibility: hidden">
+	<div class="ui-state-error ui-corner-all" style="padding: 0 .7em; visibility: hidden" id="LoginError">
 		<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
-		<strong><script type="text/javascript">document.write(Error)</script></strong> Sample ui-state-error style.</p>
+		<strong>Error:</strong> Login error. Wrong username / password?</p>
 	</div>
 </div>
 </body>
